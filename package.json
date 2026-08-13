@@ -1,0 +1,14 @@
+{
+  "name": "mock-rastreamento-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API ficticia de rastreamento de veiculos seguindo o contrato Web Service Modelo 3.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
