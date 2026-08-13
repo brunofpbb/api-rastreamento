@@ -4,6 +4,11 @@ module.exports = {
   port: Number(process.env.PORT || 3000),
   routesDir: process.env.ROUTES_DIR || path.join(__dirname, '..', 'routes'),
   timezone: process.env.TZ || 'America/Sao_Paulo',
+  auth: {
+    enabled: String(process.env.AUTH_ENABLED || 'true').toLowerCase() !== 'false',
+    username: process.env.WSSEC_USERNAME || 'rastreamento',
+    password: process.env.WSSEC_PASSWORD || 'troque-no-railway'
+  },
   // Metros por segundo usados para avançar o veículo ao longo do trajeto.
   // 8.33 m/s ~= 30 km/h.
   baseMetersPerSecond: Number(process.env.BASE_METERS_PER_SECOND || 8.33),
